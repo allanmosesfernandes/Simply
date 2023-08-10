@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+h2 {
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  background-color: #000000;
+  color: #000000;
+  overflow-x: hidden;
+}
+.nav__logo {
+  max-width: 150px;
+}
+#quoteWrapper {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.quotecontainer {
+  white-space: nowrap;
+  font-size: 3.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  p {
+    transition: all 300ms ease;
+      cursor: url("./assets/customCursor.svg"), auto;
+
+  }
+}
+
+.quote-wrapper-1 {
+  margin-bottom: 13rem;
+  margin-top: 3rem;
+  .odd {
+    transform: rotate(-8deg);
+    transform-origin: left;
+    position: relative;
+    z-index: 2;
+  }
+  .even {
+    z-index: 1;
+    position: relative;
+    transform: translate(5px, -30px) rotate(3deg);
+  }
+}
+
+.quote-wrapper-2 {
+  margin-bottom: 10rem;
+
+  .odd {
+    transform: rotate(8deg);
+    transform-origin: right;
+    position: relative;
+    z-index: 2;
+  }
+  .even {
+    z-index: 1;
+    transform: translate(-10px, -45px) rotate(358deg);
+  }
+}
+
+.quote-wrapper-3 {
+    margin: -2rem 0 10rem 0;
+  .odd {
+    transform: rotate(5deg);
+    transform-origin: left;
+    position: relative;
+    z-index: 0;
+  }
+  .even {
+    z-index: 1;
+    transform: translate(-10px, -88px)rotate(349deg);
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.quote-wrapper-4 {
+  margin: 4rem 0 10rem 0;
+  .odd {
+    transform: rotate(-8deg);
+    transform-origin: right;
+    position: relative;
+    z-index: 0;
+  }
+  .even {
+    z-index: 1;
+    transform: translate(10px, -88px) rotate(8deg);
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.quote-wrapper-5 {
+  margin: 6rem 0 10rem 0;
+  .odd {
+    transform: rotate(-5deg);
+    transform-origin: left;
+    position: relative;
+    z-index: 0;
+  }
+  .even {
+    z-index: 1;
+    transform: translate(10px, -88px) rotate(5deg);
+    display: flex;
+    justify-content: flex-start;
+  }
+}

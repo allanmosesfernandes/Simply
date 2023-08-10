@@ -1,0 +1,20 @@
+{
+  "name": "projectsimply2.0",
+  "version": "1.0.0",
+  "description": "Project Simply Demo",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Allan Fernandes",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "parcel": "^2.9.3",
+    "sass": "^1.65.1"
+  },
+  "dependencies": {
+    "marquee-text-element": "^0.0.1",
+    "smarquee": "^1.0.5"
+  }
+}

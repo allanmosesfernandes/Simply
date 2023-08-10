@@ -25,14 +25,16 @@ body {
   flex-direction: row-reverse;
 }
 
-
 .nav__logo {
   max-width: 150px;
 }
 
 #quoteWrapper {
-  margin-top: 4rem;
+  margin-top: 10rem;
   max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 #quoteWrapper :nth-child(2) {
@@ -45,13 +47,14 @@ body {
   overflow: hidden;
   height: 100px;
   display: flex;
+  justify-content: center;
   align-items: center;
   transform-origin: top left;
   overflow: hidden;
   cursor: url("./assets/customCursor.svg"), auto;
 }
 .main-quote-container {
-  margin: 0 0 10rem 0;
+  margin: 5rem 0 13rem 0;
   .quotecontainer p {
     transition: all 300ms ease;
   }
@@ -61,8 +64,7 @@ body {
     white-space: nowrap;
   }
   .quotecontainer.odd {
-    transform: translate(42px, -100px) rotate(8deg);
-    display: block;
+    transform: translate(36px, -100px) rotate(8deg);
     z-index: -1;
     position: relative;
   }
@@ -88,7 +90,7 @@ body {
   }
   .odd {
     transform-origin: left;
-    transform: translate(-22px, 200px)rotate(354deg);
+    transform: translate(-22px, 183px) rotate(354deg);
   }
 }
 

@@ -7,6 +7,7 @@ const colors = [
   "#F98A72",
   "#F6F972",
   "#72A0F9",
+  "#72F9C8",
 ];
 
 async function main() {
@@ -27,14 +28,14 @@ async function main() {
 
       // Alternate even and odd backgrounds
       if (j % 2 === 0) {
-        div.classList.add("even", "smarquee");
+        div.classList.add("even");
       } else {
         div.classList.add("odd");
       }
 
       const pTag = document.createElement("p");
       pTag.textContent = stringWithoutEmojis;
-      pTag.classList.add("");
+      console.log(stringWithoutEmojis);
       div.appendChild(pTag);
       mainDiv.appendChild(div);
     }
@@ -50,16 +51,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollPosition = window.scrollY;
 
     const evenDivs = document.querySelectorAll(".even");
-    evenDivs.forEach((evenDiv) => {
-      const evenOffset = -scrollPosition * 0.5;
-      evenDiv.querySelector(
-        "p"
-      ).style.transform = `translateX(${evenOffset}px)`;
+
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+
+      evenDivs.forEach((evenDiv, index) => {
+        const evenOffset =
+          index % 2 === 0 ? -scrollPosition * 0.5 : scrollPosition * 0.5;
+        evenDiv.querySelector(
+          "p"
+        ).style.transform = `translateX(${evenOffset}px)`;
+      });
     });
 
     const oddDivs = document.querySelectorAll(".odd");
-    oddDivs.forEach((oddDiv) => {
-      const oddOffset = scrollPosition * 0.5;
+    oddDivs.forEach((oddDiv, index) => {
+      const oddOffset =
+        index % 2 === 0 ? scrollPosition * 0.5 : -scrollPosition * 0.5;
       oddDiv.querySelector("p").style.transform = `translateX(${oddOffset}px)`;
     });
   });

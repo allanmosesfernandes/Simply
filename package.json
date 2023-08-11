@@ -9,7 +9,9 @@
   "author": "Allan Fernandes",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.9.3",
     "@parcel/transformer-sass": "^2.9.3",
+    "@parcel/transformer-webmanifest": "^2.9.3",
     "parcel": "^2.9.3",
     "sass": "^1.65.1"
   },
